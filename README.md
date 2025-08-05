@@ -1,12 +1,28 @@
-# React + Vite
+# Cosmic-Lens
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cosmic-Lens is a web application that lets users explore space through two interactive features:
 
-Currently, two official plugins are available:
+- **NASA Astronomy Picture of the Day (APOD)**
+- **Custom Star Map based on user-selected location and date**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It is designed for astronomy enthusiasts, students, and anyone curious about the cosmos.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Displays NASA’s Astronomy Picture of the Day with detailed explanation
+- Generates star charts for any location and date
+- Displays real-time update and loading status
+
+---
+
+## Tech Stack
+
+- **Frontend**: React (with Vite)
+- **Backend**: Node.js with Express
+- **APIs Used**:
+  - NASA APOD API
+  - AstronomyAPI Star Chart
+
+
