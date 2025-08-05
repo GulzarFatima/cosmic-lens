@@ -24,7 +24,6 @@ app.use(express.json())
 app.use('/api/nasa', nasaRoutes)
 app.use('/api/starmap', starmapRoutes)
 
-// Optional: serve static if you want to deploy fullstack in one folder
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
