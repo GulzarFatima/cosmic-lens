@@ -1,0 +1,155 @@
+.star-map-header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+  
+  .loading-message {
+    font-size: 15px;
+    color: #f5c518;
+  }
+  
+  .updated-message {
+    color: #4caf50;
+    font-size: 15px;
+  }
+  
+  .star-map-container {
+    margin: 0 auto;
+    padding: 24px 32px;
+    max-width: 1200px;
+  }
+  
+  .star-map-title {
+    font-size: 28.8px;
+    text-align: left;
+  }
+  
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  
+  .form-column {
+    max-width: 500px;
+    flex: 1 1 40%;
+    min-width: 280px;
+  }
+  
+  .form {
+    padding: 16px;
+    color: #eee;
+    border-radius: 8px;
+    background-color: #111;
+    box-sizing: border-box;
+  }
+  
+  .form label {
+    margin-bottom: 13px;
+    display: block;
+  }
+  
+  .form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background: #1a1a1a;
+    border-radius: 4px;
+    margin-top: 8px;
+    border: 1px solid #444;
+    color: #eee;
+    display: block;
+  }
+  
+  .form button {
+    font-weight: bold;
+    margin-top: 16px;
+    background-color: #00b894;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .form button:hover {
+    background-color: #018167;
+  }
+  
+  .meta-info {
+    margin-top: 16px;
+    color: #ccc;
+    font-size: 14px;
+  }
+  
+  .image-column {
+    min-width: 300px;
+    text-align: center;
+    flex: 1 1 55%;
+  }
+  
+  .star-chart-image {
+    height: auto;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  
+  .info-box {
+    width: 100%;
+    padding: 24px;
+    background-color: #1a1a1a;
+    margin-top: 32px;
+    color: #eee;
+    border-radius: 8px;
+  }
+  
+  .info-box ul {
+    padding-left: 19.2px;
+  }
+  
+  .info-box li {
+    margin-bottom: 6.4px;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .loading,
+  .updated {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  
+  .loading {
+    color: #ffa500;
+  }
+  
+  .updated {
+    animation: fadeOut 3s ease-out forwards;
+    color: #22c55e;
+  }
+  
+  @media (max-width: 768px) {
+    .top-row {
+      flex-direction: column;
+    }
+  
+    .form-column,
+    .image-column {
+      flex: 1 1 100%;
+    }
+  }
+  

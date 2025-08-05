@@ -1,0 +1,66 @@
+.layout-container {
+    padding: 24px 32px;
+    margin: 0 auto;
+    color: #eee;
+    max-width: 1200px;
+  }
+  
+  .site-header {
+    border-bottom: 1px solid #333;
+    text-align: left;
+    padding: 16px 0 16px;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 40px;
+    color: #00b894;
+  }
+  
+  .tagline {
+    font-size: 16px;
+    color: #ccc;
+    margin: 8px auto 0;
+    align-content: left;
+    max-width: 700px;
+  }
+  
+  .site-footer {
+    margin-top: 48px;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    padding: 24px 0;
+    text-align: left;
+    color: #aaa;
+  }
+  
+  .main-content {
+    margin-top: 32px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: left;
+    gap: 16px;
+    margin: 32px 0;
+  }
+  
+  .nav-buttons button {
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #494949;
+  }
+  
+  .nav-buttons button.active {
+    background-color: #333;
+  }
+  
