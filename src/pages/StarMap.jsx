@@ -25,7 +25,7 @@ export default function StarMap() {
       console.log('Submitting with:', { latitude, longitude, date })
 
       // Call Express server with params
-      const res = await axios.get('http://localhost:5001/api/starmap', {
+      const res = await axios.get('/api/starmap', {
         params: {
           lat: parseFloat(latitude),
           lon: parseFloat(longitude),
