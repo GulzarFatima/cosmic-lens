@@ -20,7 +20,7 @@ const port = 5001
 //   }))
 
   app.use(cors({
-    origin: 'https://cosmic-lens-1.onrender.com/',
+    origin: 'http://localhost:5173',
   }))
 
 
