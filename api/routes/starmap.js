@@ -1,50 +1,45 @@
-// src/api/starmap.js (Express backend)
 /* eslint-env node */
 /* global process */
 
-import express from 'express'
-import axios from 'axios'
-import { Buffer } from 'buffer'
+import express from 'express';
+import { Buffer } from 'node:buffer';
 
-const router = express.Router()
+const router = express.Router();
 
 router.get('/', async (req, res) => {
-  const { lat, lon, date } = req.query
+  const { lat, lon, date } = req.query;
 
   try {
-    const response = await axios.post(
-        'https://api.astronomyapi.com/api/v2/studio/star-chart',
-        {
-          observer: {
-            latitude: parseFloat(lat),
-            longitude: parseFloat(lon),
-            date: date  
-          },
-          view: {
-            type: "constellation", 
-            parameters: {
-              constellation: "ori" 
-            }
-          },
-          style: "inverted"
+    const id = process.env.ASTRO_USER;
+    const secret = process.env.ASTRO_SECRET;
+    const basic = Buffer.from(`${id}:${secret}`).toString('base64');
+
+    const r = await fetch('https://api.astronomyapi.com/api/v2/studio/star-chart', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${basic}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        observer: {
+          latitude: parseFloat(lat),
+          longitude: parseFloat(lon),
+          date
         },
-        {
-          headers: {
-            Authorization: `Basic ${Buffer.from(`${process.env.ASTRO_USER}:${process.env.ASTRO_SECRET}`).toString('base64')}`,
-            'Content-Type': 'application/json'
-          }
-        }
-      )
-      
+        view: {
+          type: 'constellation',
+          parameters: { constellation: 'ori' }
+        },
+        style: 'inverted'
+      })
+    });
 
-    const imageUrl = response.data?.data?.imageUrl
-    res.json({ imageUrl })
-} catch (error) {
-    console.error('StarMap API error:', error?.response?.data || error.message)
-    res.status(500).json({ error: 'Failed to fetch star chart' })
+    const data = await r.json();
+    res.status(r.ok ? 200 : r.status).json({ imageUrl: data?.data?.imageUrl });
+  } catch (err) {
+    console.error('StarMap API error:', err);
+    res.status(500).json({ error: 'Failed to fetch star chart' });
   }
-  
-  
-})
+});
 
-export default router
+export default router;
