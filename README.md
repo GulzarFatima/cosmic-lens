@@ -19,8 +19,8 @@ React + Node/Express app to:
 
 - **Frontend:** https://cosmic-lens-2.onrender.com
 - **API base:** https://cosmic-lens-1.onrender.com  
-  - APOD example: `GET https://cosmic-lens-1.onrender.com/api/nasa?date=2024-01-01`
-  - Star map example: `GET https://cosmic-lens-1.onrender.com/api/starmap?lat=43.65&lon=-79.38&date=2025-08-04`
+  - APOD example: `https://cosmic-lens-1.onrender.com/api/nasa?date=2024-01-01`
+  - Star map example: `https://cosmic-lens-1.onrender.com/api/starmap?lat=43.65&lon=-79.38&date=2025-08-04`
 
 ---
 
