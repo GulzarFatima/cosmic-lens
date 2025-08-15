@@ -15,9 +15,14 @@ dotenv.config()
 const app = express()
 const port = 5001
 
-app.use(cors({
-    origin: 'http://localhost:5173',
+// app.use(cors({
+//     origin: 'http://localhost:5173',
+//   }))
+
+  app.use(cors({
+    origin: 'https://cosmic-lens-1.onrender.com/',
   }))
+
 
 app.use(express.json())
 
